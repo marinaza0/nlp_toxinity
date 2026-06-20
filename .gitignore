@@ -1,18 +1,23 @@
-nlp/models/
 # Python
 .venv/
 venv/
 __pycache__/
 *.pyc
 
+# IDE
+.idea/
+
 # Mac
 .DS_Store
-
-# Data
-data/raw/
 
 # Jupyter
 .ipynb_checkpoints/
 
-# Ollama / local outputs
+# Node
+node_modules/
+
+# Experiment outputs
+results/
 *.log
+# Data
+data/raw/
