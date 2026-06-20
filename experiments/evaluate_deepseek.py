@@ -3,7 +3,7 @@ import ollama
 
 MODEL = "deepseek-r1:7b"
 
-df = pd.read_csv("data/processed/textdetox_en_sample_100.csv")
+df = pd.read_csv("data/processed/textdetox_en_sample_500.csv") # options: textdetox_en_sample_100.csv, textdetox_en_sample_500.csv ...
 
 predictions = []
 
@@ -45,8 +45,8 @@ Return only the final label.
 df["prediction"] = predictions
 
 df.to_csv(
-    "data/processed/textdetox_en_sample_100_predictions.csv",
+    "data/processed/textdetox_en_sample_500_predictions.csv",
     index=False
-)
+) # options: textdetox_en_sample_100_predictions.csv, textdetox_en_sample_500_predictions.csv...
 
 print("Done")
