@@ -19,5 +19,6 @@ node_modules/
 # Experiment outputs
 results/
 *.log
+
 # Data
-data/raw/
+# data/raw/
