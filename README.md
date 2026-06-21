@@ -13,7 +13,7 @@ See [AGENTS.md](AGENTS.md) for research questions, team structure, and evaluatio
   - `en/` — English (TextDetox)
   - `ru/` — Russian datasets + bad words dictionaries
   - `hi/` — Hindi datasets
-- **`data/processed/`** — Generated samples and predictions
+- **`data/processed/`** — Prepared evaluation samples (subsets, balanced splits)
 
 ### 🧪 Experiments
 - **`experiments/encoder_transformers/`** — Maryna's models (BERT, RoBERTa, DeBERTa, XLM-R)
@@ -33,8 +33,9 @@ Each folder contains standalone experiment scripts. Shared utilities can go in a
 - **`src/evaluation/`** — Metrics, error analysis
 
 ### 📈 Results
-- **`results/reasoning_llms/`** — Predictions and metrics by team
-  - Structure: `results/{team}/{model_name}/`
+- **`results/{team}/{model_name}/`** — Model predictions and metrics
+  - Predictions (CSV with scores)
+  - Evaluation metrics (accuracy, F1, confusion matrix, etc.)
 
 ---
 
