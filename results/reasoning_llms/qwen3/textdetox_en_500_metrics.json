@@ -1,0 +1,49 @@
+{
+  "model": "qwen3",
+  "dataset": "textdetox_en",
+  "language": "en",
+  "sample_size": 500,
+  "used_rows": 500,
+  "unknown_predictions": {
+    "count": 0,
+    "percentage": 0.0,
+    "example": null
+  },
+  "metrics": {
+    "accuracy": 0.942,
+    "precision": 0.9169811320754717,
+    "recall": 0.972,
+    "macro_f1": 0.9419477529776799
+  },
+  "confusion_matrix": [
+    [228, 22],
+    [7, 243]
+  ],
+  "classification_report": {
+    "0": {
+      "precision": 0.97,
+      "recall": 0.91,
+      "f1_score": 0.94,
+      "support": 250
+    },
+    "1": {
+      "precision": 0.92,
+      "recall": 0.97,
+      "f1_score": 0.94,
+      "support": 250
+    },
+    "accuracy": 0.94,
+    "macro_avg": {
+      "precision": 0.94,
+      "recall": 0.94,
+      "f1_score": 0.94,
+      "support": 500
+    },
+    "weighted_avg": {
+      "precision": 0.94,
+      "recall": 0.94,
+      "f1_score": 0.94,
+      "support": 500
+    }
+  }
+}

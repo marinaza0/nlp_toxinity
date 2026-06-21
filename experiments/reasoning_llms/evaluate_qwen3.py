@@ -4,7 +4,7 @@ import ollama
 MODEL = "qwen3:8b"
 
 # convention: textdetox_en_sample_100.csv, textdetox_en_sample_500.csv ...
-df = pd.read_csv("data/processed/textdetox_en_sample_100.csv") 
+df = pd.read_csv("data/processed/textdetox_en_sample_500.csv") 
 
 predictions = []
 
@@ -47,7 +47,7 @@ df["prediction"] = predictions
 
 # convention: textdetox_en_sample_100_predictions.csv, textdetox_en_sample_500_predictions.csv...
 df.to_csv(
-    "results/reasoning_llms/qwen3/textdetox_en_sample_100_predictions.csv",
+    "results/reasoning_llms/qwen3/textdetox_en_sample_500_predictions.csv",
     index=False
 ) 
 

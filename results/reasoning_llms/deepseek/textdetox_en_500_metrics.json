@@ -1,0 +1,49 @@
+{
+  "model": "deepseek-r1:7b",
+  "dataset": "textdetox_en",
+  "language": "en",
+  "sample_size": 500,
+  "used_rows": 499,
+  "unknown_predictions": {
+    "count": 1,
+    "percentage": 0.2,
+    "example": "Better dead than being abused by some Middle eastern douchebro chucklefucks."
+  },
+  "metrics": {
+    "accuracy": 0.9138276553106213,
+    "precision": 0.9186991869918699,
+    "recall": 0.9076305220883534,
+    "macro_f1": 0.913822117798261
+  },
+  "confusion_matrix": [
+    [230, 20],
+    [23, 226]
+  ],
+  "classification_report": {
+    "0": {
+      "precision": 0.91,
+      "recall": 0.92,
+      "f1_score": 0.91,
+      "support": 250
+    },
+    "1": {
+      "precision": 0.92,
+      "recall": 0.91,
+      "f1_score": 0.91,
+      "support": 249
+    },
+    "accuracy": 0.91,
+    "macro_avg": {
+      "precision": 0.91,
+      "recall": 0.91,
+      "f1_score": 0.91,
+      "support": 499
+    },
+    "weighted_avg": {
+      "precision": 0.91,
+      "recall": 0.91,
+      "f1_score": 0.91,
+      "support": 499
+    }
+  }
+}
