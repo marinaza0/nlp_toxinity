@@ -9,4 +9,4 @@ print(df.head())
 print(df.columns)
 print(df.shape)
 
-df.to_csv("data/raw/textdetox_en.csv", index=False)
+df.to_csv("data/raw/en/textdetox_en.csv", index=False)
