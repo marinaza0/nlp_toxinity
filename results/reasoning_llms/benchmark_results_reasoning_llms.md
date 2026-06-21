@@ -24,6 +24,7 @@ Both models performed exceptionally well, with high accuracy and balanced precis
 | **DeepSeek-R1** | 500 | 0.914 | 0.919 | 0.908 | **0.914** | 1/500 (0.2%) |
 | **Qwen3** | 100 | 0.960 | 0.942 | 0.980 | **0.960** | 0/100 (0.0%) |
 | **Qwen3** | 500 | 0.942 | 0.917 | 0.972 | **0.942** | 0/500 (0.0%) |
+| **Qwen3:8B** | TextDetox EN+RU+HI | 504 | 0.893 | 0.902 | 0.881 | **0.893** | 0/504 (0.0%) |
 
 ---
 
@@ -31,7 +32,7 @@ Both models performed exceptionally well, with high accuracy and balanced precis
 
 ### DeepSeek-R1:7B
 
-#### 100 Samples
+#### 100 Samples (en)
 - **Accuracy:** 0.980
 - **Precision:** 1.000 (No false positives)
 - **Recall:** 0.960
@@ -44,7 +45,7 @@ Both models performed exceptionally well, with high accuracy and balanced precis
 - **Unknown Predictions:** 0/100 (0.0%)
 - **Observations:** Perfect precision—zero false positives. Two false negatives suggest conservative classification of borderline toxic content.
 
-#### 500 Samples
+#### 500 Samples (en)
 - **Accuracy:** 0.914
 - **Precision:** 0.919
 - **Recall:** 0.908
@@ -63,9 +64,9 @@ Both models performed exceptionally well, with high accuracy and balanced precis
 
 ---
 
-### Qwen3
+### Qwen3:8B
 
-#### 100 Samples
+#### 100 Samples (en)
 - **Accuracy:** 0.960
 - **Precision:** 0.942
 - **Recall:** 0.980
@@ -78,7 +79,7 @@ Both models performed exceptionally well, with high accuracy and balanced precis
 - **Unknown Predictions:** 0/100 (0.0%)
 - **Observations:** Balanced performance with high recall. 3 false positives (non-toxic classified as toxic) vs 1 false negative.
 
-#### 500 Samples
+#### 500 Sample (en)
 - **Accuracy:** 0.942
 - **Precision:** 0.917
 - **Recall:** 0.972
@@ -90,6 +91,59 @@ Both models performed exceptionally well, with high accuracy and balanced precis
   ```
 - **Unknown Predictions:** 0/500 (0.0%)
 - **Observations:** Excellent recall (97.2%)—only 7 toxic samples missed. Reliable classifier with minimal classification failures.
+
+#### Multilingual 504 Samples
+
+Dataset:
+
+- TextDetox multilingual sample
+- Languages: English, Russian, Hindi
+- 504 total samples
+- 168 samples per language
+- 84 toxic and 84 non-toxic samples per language
+
+Results:
+
+- **Total rows:** 504
+- **Used rows:** 504
+- **Accuracy:** 0.8928571428571429
+- **Precision:** 0.9024390243902439
+- **Recall:** 0.8809523809523809
+- **Macro-F1:** 0.8928419560595322
+- **Unknown Predictions:** 0/504 (0.0%)
+
+Confusion matrix:
+
+```text
+[[228, 24],
+ [ 30,222]]
+```
+
+Classification report:
+
+```text
+              precision    recall  f1-score   support
+
+           0       0.88      0.90      0.89       252
+           1       0.90      0.88      0.89       252
+
+    accuracy                           0.89       504
+   macro avg       0.89      0.89      0.89       504
+weighted avg       0.89      0.89      0.89       504
+```
+
+Classification report summary:
+
+| Class | Precision | Recall | F1-score | Support |
+|---|---:|---:|---:|---:|
+| Non-toxic (0) | 0.88 | 0.90 | 0.89 | 252 |
+| Toxic (1) | 0.90 | 0.88 | 0.89 | 252 |
+| Macro avg | 0.89 | 0.89 | 0.89 | 504 |
+| Weighted avg | 0.89 | 0.89 | 0.89 | 504 |
+
+Observation:
+
+Qwen3 remained stable on the multilingual dataset with zero unknown predictions. Performance decreased compared with English-only evaluation, which is expected because multilingual classification is harder and includes Russian and Hindi inputs.
 
 ---
 
