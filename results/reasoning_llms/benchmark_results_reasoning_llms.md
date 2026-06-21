@@ -145,6 +145,27 @@ Observation:
 
 Qwen3 remained stable on the multilingual dataset with zero unknown predictions. Performance decreased compared with English-only evaluation, which is expected because multilingual classification is harder and includes Russian and Hindi inputs.
 
+## Per-Language Analysis (Qwen3 Multilingual)
+
+To better understand multilingual performance, metrics were computed separately for English, Russian, and Hindi.
+
+| Language | Samples | Accuracy | Precision | Recall | Macro-F1 |
+|----------|----------:|----------:|----------:|----------:|----------:|
+| English | 168 | 0.952 | 0.932 | 0.976 | **0.952** |
+| Russian | 168 | 0.905 | 0.870 | 0.952 | **0.905** |
+| Hindi | 168 | 0.821 | 0.909 | 0.714 | **0.819** |
+
+### English
+
+- Accuracy: 0.952
+- Macro-F1: 0.952
+- Confusion Matrix:
+
+```text
+[[78, 6],
+ [ 2,82]]
+
+
 ---
 
 ## Key Insights
@@ -162,6 +183,9 @@ Qwen3 remained stable on the multilingual dataset with zero unknown predictions.
 4. **Robustness:** 
    - Qwen3 shows better generalization to larger datasets
    - Both models exceed industry benchmarks for toxicity classification
+
+5. Significant language-specific differences were observed.
+   English achieved the highest Macro-F1 (0.952), followed by Russian (0.905), while Hindi was substantially lower (0.819). Hindi recall dropped to 71.4%, making it the primary source of multilingual performance degradation.
 
 ---
 
