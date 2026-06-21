@@ -152,34 +152,29 @@ Dataset:
 
 * TextDetox English
 
-Sample:
+Sample 100:
 
 * 100 balanced samples
 * 50 toxic
 * 50 non-toxic
-
-Results:
-
-* Accuracy: 0.98
-* Precision: 1.00
-* Recall: 0.96
-* Macro-F1: 0.98
 
 Confusion Matrix:
 
 [[50, 0],
 [ 2,48]]
 
-Observations:
+Sample 500:
 
-* No false positives
-* Two false negatives
-* Model appears conservative when classifying borderline toxic content
+* 100 balanced samples
+* 50 toxic
+* 50 non-toxic
 
-
+Confusion matrix:
+[[230  20]
+ [ 23 226]]
 ⸻
 
-Repository Structure (to be updated)
+Repository Structure (may be not updated)
 
 .
 ├── data
