@@ -2,7 +2,7 @@ import pandas as pd
 from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, confusion_matrix, classification_report
 
 # df = pd.read_csv("results/reasoning_llms/deepseek/textdetox_en_sample_500_predictions.csv")
-df = pd.read_csv("results/reasoning_llms/qwen3/textdetox_en_sample_100_predictions.csv")
+df = pd.read_csv("results/reasoning_llms/qwen3/textdetox_multilingual_en_ru_hi_sample_504_predictions.csv")
 
 unknown_count = (df["prediction"] == -1).sum()
 
