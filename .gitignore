@@ -21,4 +21,7 @@ node_modules/
 *.log
 
 # Data
-# data/raw/
+data/raw/
+
+#Models
+models/
